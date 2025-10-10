@@ -69,7 +69,7 @@ export default class {
             let result: unknown;
 
             // Define the OnInvokeResult event handler
-            window.OnInvokeResult = function (alResult: unknown) {
+            window.OnInvokeResult = function (alResult: unknown): void {
                 result = alResult;
             };
 
@@ -95,7 +95,7 @@ export default class {
      *
      * @param {Function} func - The function to make accessible in AL.
      */
-    static makeFunctionAccessible(func: (...args: unknown[]) => unknown) {
+    static makeFunctionAccessible(func: (...args: unknown[]) => unknown): void {
         const functionName = func.name; // Get the name of the function
         const capitalizedFunctionName = functionName.charAt(0).toUpperCase() + functionName.slice(1); // Capitalize the first letter of the function name
         // eslint-disable-next-line @typescript-eslint/no-explicit-any

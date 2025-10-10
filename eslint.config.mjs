@@ -66,27 +66,40 @@ export default [{
         react: {
             version: 'detect',
         },
+        'import/resolver': {
+            typescript: {
+                project: './tsconfig.json',
+            },
+        },
     },
 
     rules: {
-        '@typescript-eslint/explicit-function-return-type': 'off',
-        '@typescript-eslint/explicit-module-boundary-types': 'off',
+        // TypeScript-specific rules
+        '@typescript-eslint/explicit-function-return-type': 'error',
+        '@typescript-eslint/explicit-module-boundary-types': 'error',
         '@typescript-eslint/no-explicit-any': 'warn',
-
         '@typescript-eslint/no-unused-vars': ['warn', {
             argsIgnorePattern: '^_',
         }],
 
+        // Turn off base rule in favor of the TS version
+        'no-unused-vars': 'off',
+
+        // React-related rules
         'react/prop-types': 'off',
         'react/react-in-jsx-scope': 'off',
         'react-hooks/rules-of-hooks': 'error',
         'react-hooks/exhaustive-deps': 'warn',
-        'import/prefer-default-export': 'off',
-        'import/no-unresolved': 'off',
+
+        // Import rules
+        'import/prefer-default-export': 'warn',
+        'import/no-unresolved': 'error',
+
+        // Console/debugging
         'no-console': 'warn',
         'no-debugger': 'warn',
-        'no-unused-vars': 'off',
 
+        // Code style
         quotes: ['error', 'single', {
             allowTemplateLiterals: true,
         }],
