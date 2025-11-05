@@ -2,10 +2,29 @@
   "name": "react-ts-bc",
   "version": "0.1.0",
   "description": "A template for React to use in Business Central AL",
+  "license": "MIT",
   "author": "Florian Noever",
   "type": "module",
-  "license": "MIT",
-  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Florian-Noever/react-ts-bc"
+  },
+  "bugs": {
+    "url": "https://github.com/Florian-Noever/react-ts-bc/issues"
+  },
+  "homepage": "https://github.com/Florian-Noever/react-ts-bc",
+  "keywords": [
+    "react",
+    "template",
+    "typescript",
+    "webpack",
+    "template-project",
+    "bc",
+    "react-webpack",
+    "al",
+    "business-central",
+    "control-addin"
+  ],
   "imports": {
     "#/*": "./src/*"
   },
